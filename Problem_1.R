@@ -1,3 +1,7 @@
+## NOTE: readability: leave some blank linkes between the code to make it more readable
+
+## NOTE: always leave space before and after <-, -, +, *, /. Leave a blank after commas. Leave blanks around 
+## <, >, ==, <=, =>, etc.
 
 # a
 x <- c(4, 1, 1, 4)

@@ -18,6 +18,8 @@ max_above_avg <- xmax > average_maximum
 xmax[max_above_avg]
 
 #f
+## Nice
+
 dayNames <- c('03Mon18', '04Tue18', '05Wed18', '04Thu18', '05Fri18', '06Sat18', '07Sun18')
 names(xmin) <- dayNames
 names(xmax) <- dayNames
@@ -29,11 +31,20 @@ temperatures
 #h
 temperatures$xminFahrenheit <- (9/5)*temperatures$xmin+32
 
+## Easier:
+temperatures <- within(temperatures, {
+  xminFahrenheit <- xmin * (9/5) + 32
+  xmaxFahrenheit <- xmax * (9/5) + 32
+})
+
+temperaturesFahrenheit <- temeratures[, c('xminFahrenheit', 'xmaxFahrenheit)]
+
 #i
 temperaturesFahrenheit <- data.frame(dayNames, xminFahrenheit=(9/5)*temperatures$xmin+32, 
                                      xmaxFahrenheit=(9/5)*temperatures$xmax+32)
 temperaturesFahrenheit
 
 #j
+## Nice
 temperaturesFahrenheit_ww1 <- temperaturesFahrenheit[1:5,]
 temperaturesFahrenheit_ww2 <- temperaturesFahrenheit[-(6:7),]
