@@ -1,4 +1,3 @@
-
 #a
 xmin <- c(23.0, 20.5, 28.2, 20.3, 22.4, 17.2, 18.2)
 xmax <- c(25.0, 22.8, 31.2, 27.3, 28.4, 20.2, 24.1)
@@ -34,3 +33,7 @@ temperatures$xminFahrenheit <- (9/5)*temperatures$xmin+32
 temperaturesFahrenheit <- data.frame(dayNames, xminFahrenheit=(9/5)*temperatures$xmin+32, 
                                      xmaxFahrenheit=(9/5)*temperatures$xmax+32)
 temperaturesFahrenheit
+
+#j
+temperaturesFahrenheit_ww1 <- temperaturesFahrenheit[1:5,]
+temperaturesFahrenheit_ww2 <- temperaturesFahrenheit[-(6:7),]
